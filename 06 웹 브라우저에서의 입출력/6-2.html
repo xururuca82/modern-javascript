@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>시각을 콘솔에 표시하기</title>
+    <script>
+        // function displayTime() {
+        //     var d = new Date();
+        //     console.log("현재 시각은 " + d.toLocaleString() + " 입니다.");
+        // }
+
+        // // Window 객체의 onload 프로퍼티에 함수를 저장한다.
+        // // 이 함수는 웹 브라우저가 문서를 모두 읽어 들인 후에 실행된다.
+        // window.onload = function() {
+        //     // input 요소의 객체 가져오기
+        //     var button = document.getElementById("button");
+        //     // input 요소를 클릭했을 때 동작하는 이벤트 처리기를 등록한다.
+        //     button.onclick = displayTime;
+        // }
+
+        // window.onload = function() {            
+        //     var button = document.getElementById("button");
+            
+        //     button.onclick = function() {
+        //         var d = new Date();
+        //         console.log("현재 시각은 " + d.toLocaleString() + " 입니다.");                
+        //     };
+        // }
+
+        window.onload = function() {            
+            var button = document.getElementById("button");
+            
+            button.onclick = function displayTime() {
+                var d = new Date();
+                console.log("현재 시각은 " + d.toLocaleString() + " 입니다.");                
+            };
+
+            // button.onclick = null;            
+        }
+
+        // var timer = setTimeout(function() {
+        //     console.log(new Date());            
+        // }, 20000);
+
+        // setInterval(function() {
+        //     console.log(new Date());            
+        // }, 1000);
+
+        setInterval("console.log(new Date());", 1000);
+        
+    </script>
+</head>
+<body>
+    <input type="button" value="click" id="button">
+</body>
+</html>

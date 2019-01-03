@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <script>
+        window.onload = function() {
+            // canvas 요소 가져오기
+            var canvas = document.getElementById("mycanvas");
+            // canvas 렌더링 켄텍스트 가져오기
+            var ctx = canvas.getContext("2d");
+            // 그리기
+            ctx.beginPath();
+            // 시계 방향
+            ctx.arc(100, 100, 80, 30*Math.PI/180, 120*Math.PI/180, false);
+            ctx.stroke();
+            // 시계 반대 방향
+            ctx.beginPath();
+            ctx.arc(100, 100, 80, 30*Math.PI/180, 120*Math.PI/180, true);
+            ctx.stroke();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="mycanvas" width="640" height="400"></canvas>
+</body>
+</html>
